@@ -34,30 +34,3 @@ function UserRegister(){
         });
 }
 
-// Function to handle user sign-in
-function SignIn(){
-    var email = document.getElementById('eemail').value;
-    var password = document.getElementById('lpassword').value;
-    // Check if the email and password match any user in the database
-    usersRef.orderByChild("email").equalTo(email).once("value", function(snapshot) {
-        if (snapshot.exists()) {
-            snapshot.forEach(function(childSnapshot) {
-                var childData = childSnapshot.val();
-                if (childData.password === password) {
-                    // If the email and password match, redirect the user to Google
-                    window.open("https://www.google.com","_self");
-                } else {
-                    alert("Incorrect password");
-                }
-            });
-        } else {
-            alert("User does not exist");
-        }
-    });
-}
-
-// Add event listener to the form submit button
-document.getElementById('form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    UserRegister();
-});
