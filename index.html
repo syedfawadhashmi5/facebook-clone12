@@ -183,31 +183,7 @@
         <div style="font-weight: 600;text-align: center;margin: 10px 0;color: #777;">Facebook Inc</div>
     </div>
 
-        
-
-    <script>
-        // Handle login form submission
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-          event.preventDefault();
-      
-          var email = document.getElementById('email').value;
-          var password = document.getElementById('password').value;
-      
-          firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(function(userCredential) {
-              // Login successful, redirect or perform any necessary action
-              console.log("Login successful!");
-              // Example: Redirect to a different page
-              window.location.href = "dashboard.html";
-            })
-            .catch(function(error) {
-              // Handle login error
-              var errorMessage = error.message;
-              console.error(errorMessage);
-              alert("Login failed. Please check your credentials.");
-            });
-        });
-      </script>
+    
 
 </body>
 
