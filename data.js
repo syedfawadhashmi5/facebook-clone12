@@ -2,6 +2,7 @@
 const firebaseConfig = {
     apiKey: "AIzaSyBcS9ZzEkaHduKbpHYAxP_MNbOeg3PoCio",
     authDomain: "demodeta-5a615.firebaseapp.com",
+    databaseURL: "https://demodeta-5a615-default-rtdb.firebaseio.com",
     projectId: "demodeta-5a615",
     storageBucket: "demodeta-5a615.appspot.com",
     messagingSenderId: "56079100568",
