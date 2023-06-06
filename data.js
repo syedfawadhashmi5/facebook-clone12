@@ -13,11 +13,7 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Get a reference to the database service
-var database = firebase.database();
 
-// Get a reference to the database node for email and password
-var usersRef = database.ref("users");
 
 // Function to handle user registration
 function UserRegister(){
@@ -33,4 +29,3 @@ function UserRegister(){
             alert("Error signing up");
         });
 }
-

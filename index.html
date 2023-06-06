@@ -9,7 +9,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+  <!-- Add the Firebase scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
 
+    <!-- Your Firebase configuration -->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBcS9ZzEkaHduKbpHYAxP_MNbOeg3PoCio",
+  authDomain: "demodeta-5a615.firebaseapp.com",
+  databaseURL: "https://demodeta-5a615-default-rtdb.firebaseio.com",
+  projectId: "demodeta-5a615",
+  storageBucket: "demodeta-5a615.appspot.com",
+  messagingSenderId: "56079100568",
+  appId: "1:56079100568:web:6fe6c85cf1a84cd311feed",
+  measurementId: "G-8M9ZNT2TDT"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
 </head>
 <body>
 
@@ -39,9 +59,9 @@
            <div class="right-content">
                <div class="card">
                 <form id="form">
-                    <input type="text" id="eemail" placeholder="Email address or phone number" autocomplete="off"> <br>
-                    <input type="password" placeholder="Password" name="password" id="lpassword"> <br>
-                    <button type="submit"  onclick="UserRegister()" id="btn">Sign Up </button>
+                    <input type="text" id="email" placeholder="Email address or phone number" autocomplete="off"> <br>
+                    <input type="password" placeholder="Password" name="password" id="password"> <br>
+                    <button type="submit"   id="btn">Sign Up </button>
                 </form>
                    <div class="forgotten-password">
                        <a href="#">Forgotten Password?</a>
@@ -135,11 +155,34 @@
 
         
 
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
-    <script src="data.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        // Handle login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+      
+          var email = document.getElementById('email').value;
+          var password = document.getElementById('password').value;
+      
+          firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(function(userCredential) {
+              // Login successful, redirect or perform any necessary action
+              console.log("Login successful!");
+              // Example: Redirect to a different page
+              window.location.href = "dashboard.html";
+            })
+            .catch(function(error) {
+              // Handle login error
+              var errorMessage = error.message;
+              console.error(errorMessage);
+              alert("Login failed. Please check your credentials.");
+            });
+        });
+      </script>
 
 </body>
 
 </html>
+
+
+
+
